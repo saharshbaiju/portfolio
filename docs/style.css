@@ -4,6 +4,7 @@
     --main-text:#DFF124;
     --quote-text:#F0F0F080;
     --description-text:#F0F0F0;
+    --shade-colour-text:#617272D1;
 
 }
 .lightmode{
@@ -11,6 +12,7 @@
     --main-text:#1f67f1;
     --quote-text:#12121280;
     --description-text:black;
+    --shade-colour-text:#112925B1;
 }
 body{
     margin:0;
@@ -42,6 +44,53 @@ a{
     top: 0;
     left: 0;
     z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+
+}
+.theme-btn{
+    font-family: "DM Sans","sans-serif";
+    font-size: 13px;
+    font-weight: 700;
+    padding:4px 14px;
+    border: 2px solid var(--main-text);
+    border-radius: 40px;
+    color: var(--main-text);
+    background: var(--dark-background);
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-right: 20px;
+    
+}
+.theme-btn:hover{
+    background: ;
+    color: var(--main-text);
+}
+.edu-item{
+    border-bottom: solid 0.2px var(--main-text);
+    margin: 15px;
+}
+.education{
+    font-family: "DM Sans";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.edu-place ,.edu-year{
+    color: var(--quote-text);
+    font-size: 16px;
+}
+.education h3{
+    color: var(--description-text);
+    font-size: 20px;
+    
+}
+.edu-desc{
+    color: var(--description-text);
+    font-size: 16px;
+    line-height: 1.5;
 }
 .quote{
     margin-top: 30px ;
@@ -75,7 +124,31 @@ a{
    
 }
 
+.para{
+    color:var(--description-text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+}
 
+.about-para1{
+    color:var(--shade-colour-text);
+    margin: 20px;
+    text-align: left;
+    font-size: clamp(17px,2.5vw,25px);
+}
+.about-para2{
+    margin: 20px;
+    text-align: left;
+    font-size: clamp(17px,2vw,20px);
+
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    
+}
 .card-1{
     color:var(--main-text);
     font-family: "Big Shoulders", sans-serif;
@@ -253,6 +326,22 @@ a{
         animation: backcolor 4s linear forwards;
         animation-delay: 2.4s;
     }
+    .side-name{
+        font-size: 100px;
+    }
+
+    .edu-place ,.edu-year,.edu-desc{
+        font-size: 14px;
+    }
+    
+    }
+    @media (max-width:768px){
+    .about-container{
+        grid-template-columns: 1fr;
+    }
+    .education{
+        grid-template-columns: 1fr;
+}
     @keyframes backcolor {
         0%{
             opacity: 0.2;
