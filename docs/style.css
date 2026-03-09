@@ -4,6 +4,7 @@
     --main-text:#DFF124;
     --quote-text:#F0F0F080;
     --description-text:#F0F0F0;
+
 }
 .lightmode{
     --dark-background:#F0F0F0;
@@ -15,14 +16,17 @@ body{
     margin:0;
     background:var(--dark-background);
 }
+a{
+    all: unset;
+}
 .intro{
-    height:100vh;
     display:flex;
     flex-direction:column;
-    padding-top:10vw;
-    align-items: center;
-    
+    align-items:center;
+    min-height:100vh;
+    margin-top: clamp(60px, 6vw, 120px);
 }
+
 .wrapper{
     overflow-x:hidden;
     display: block;
@@ -42,7 +46,8 @@ body{
 .quote{
     margin-top: 30px ;
     text-align: center;
-    color:var(--quote-text);    
+    color:var(--quote-text);
+    font-family: "DM Sans", sans-serif;   
 }
 .icon{
     color:var(--main-text);
@@ -60,6 +65,92 @@ body{
     text-align: center;
     width: clamp(200px, 65vw, 600px);
     font-size: clamp(10px,4vw,18px);
+}
+.carousel-1{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+   
+}
+
+
+.card-1{
+    color:var(--main-text);
+    font-family: "Big Shoulders", sans-serif;
+    font-size:clamp(50px,20vw,100px);
+    font-weight: 900;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: clamp(10px,4vw,20px);
+
+}
+.card-2{
+    color:rgb(74 74 74);
+    font-family: "Big Shoulders", sans-serif;
+    font-size:clamp(30px,7vw,50px);
+    font-weight: 900;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: clamp(10px,4vw,20px);
+    margin-right: clamp(10px,4vw,20px);
+}
+.carousel-track{
+    display: flex;
+    width: max-content;
+    animation: scroll 14s linear infinite;
+}
+.carousel-track2{
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    animation-direction: reverse;
+    
+}
+
+.carousel-track:hover{
+    animation-play-state: paused;
+}
+.card-1:hover{
+    color: var(--description-text);
+}
+.card-2:hover{
+    color: var(--description-text);
+}
+.group{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:auto;   
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.side-name{
+    color: var(--main-text);
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size:120px;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+    line-height:0.9;
+    
 }
 .name{
     color: var(--main-text);
@@ -87,6 +178,17 @@ body{
     color:var(--main-text)
 }
 /* ------------------- */
+
+
+
+
+
+
+
+
+
+
+/*  */
 .loader{
     position:fixed;
     inset:0;
@@ -97,6 +199,7 @@ body{
     z-index: 50;
     background: var(--dark-background);
     animation:loaderExit 0.8s ease 2.5s forwards;
+     pointer-events:none;
 }
 
 /* signature draw */
@@ -164,3 +267,5 @@ body{
     }
     
 }
+/*  */
+/*  */
