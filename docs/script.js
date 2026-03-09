@@ -1,9 +1,12 @@
 const btn = document.getElementById("theme-toggle");
 
-if(localStorage.getItem("theme") === "light"){
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
     document.body.classList.add("lightmode");
     btn.textContent = "DARK";
 }else{
+    document.body.classList.remove("lightmode");
     btn.textContent = "LIGHT";
 }
 

@@ -92,6 +92,44 @@ a{
     font-size: 16px;
     line-height: 1.5;
 }
+
+
+.projects{
+    font-family:"DM Sans";
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.project-item{
+    border-bottom: solid 0.2px var(--main-text);
+    margin:15px;
+    padding-bottom:10px;
+
+    text-decoration:none;
+    display:block;
+    transition:0.2s ease;
+}
+
+.project-item:hover{
+    transform:translateY(-4px);
+}
+
+.projects h3{
+    color:var(--description-text);
+    font-size:20px;
+}
+
+.project-place{
+    color:var(--quote-text);
+    font-size:16px;
+}
+
+.project-desc{
+    color:var(--description-text);
+    font-size:16px;
+    line-height:1.5;
+}
 .quote{
     margin-top: 30px ;
     text-align: center;
@@ -149,6 +187,49 @@ a{
     gap: 40px;
     
 }
+.contact-intro{
+    color:var(--description-text);
+    margin: 10px;
+    font-family: "DM Sans";
+}
+.contact-info{
+    display:grid;
+    grid-template-columns: 1fr ;
+    justify-content:center;
+    gap: 0px;
+    
+    align-items: center;
+    font-family:"DM Sans", sans-serif;
+    font-size:16px;
+    text-align:center;
+}
+
+.contact-info a,
+.contact-info p{
+    padding:12px 18px;
+    border-radius:12px;
+    transition:0.25s ease;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-info a{
+    color:var(--main-text);
+    border:2px solid transparent;
+}
+
+
+.contact-info a:hover{
+    border:2px solid var(--main-text);
+    transform:translateY(-3px);
+}
 .card-1{
     color:var(--main-text);
     font-family: "Big Shoulders", sans-serif;
@@ -200,7 +281,18 @@ a{
 .group{
     display:flex;
     flex-direction:column;
+    width:100%;on:column;
     width:100%;
+    margin-top:auto;   
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
     margin-top:auto;   
 }
 
@@ -342,6 +434,9 @@ a{
     .education{
         grid-template-columns: 1fr;
 }
+    .projects{
+        grid-template-columns:1fr;
+    }
     @keyframes backcolor {
         0%{
             opacity: 0.2;
